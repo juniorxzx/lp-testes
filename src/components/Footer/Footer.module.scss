@@ -1,0 +1,81 @@
+
+.footer{
+    display: flex;
+    padding: 3.5rem;
+    width: 100%;
+    gap: 2rem;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    color: $bg-black;
+}
+
+// Exemplo de estilo para smartphones em retrato
+@media screen and (min-width: 576px) {}
+
+// Exemplo de estilo para smartphones em paisagem
+@media screen and (min-width: 768px) {
+    .header {
+        .nav {
+
+            .box {
+                .menuMobile {
+                    display: none;
+                }
+
+                .menu {
+                    display: flex;
+                    gap: 2rem;
+
+                    a{
+                        font-weight: 700;
+                    }
+                    a:hover{
+                        color: $text-title;
+                    }
+                }
+
+                .cta {
+                    display: none;
+                }
+            }
+        }
+
+    }
+}
+
+// Exemplo de estilo para tablets e dispositivos similares
+@media screen and (min-width: 992px) {
+
+    .header {
+        .nav {
+
+            .box {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                .menu {
+                    display: flex;
+                    gap: 2rem;
+
+                }
+
+                .cta {
+                    display: flex;
+                    padding: 1rem;
+                    background-color: $bg-black;
+                    color: $text-title;
+                    border-radius: 12px;
+                    cursor: pointer;
+                    transition: ease-in-out 300ms;
+                    &:hover{
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+// Exemplo de estilo para desktops e laptops
+@media screen and (min-width: 1200px) {}

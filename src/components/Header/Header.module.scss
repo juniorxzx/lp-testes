@@ -1,0 +1,177 @@
+.header {
+    display: flex;
+    padding: 2rem 3.5rem;
+
+    .nav {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            font-size: 24px;
+        }
+
+        .box {
+            display: flex;
+            position: relative;
+
+            .menuMobile {
+                display: flex;
+                width: 100%;
+
+                &>.menu {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    box-shadow: $box-shadow;
+                    padding: 1rem;
+                    position: absolute;
+                    right: 0;
+                    width: 200px;
+                    background-color: $bg-white;
+                    top: 40px;
+                    border-radius: 12px;
+                    transition: ease-in-out 300ms;
+                    gap: 1.4rem;
+
+                    .mItem {}
+
+                }
+
+                .button {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 20px;
+                    height: 20px;
+                    transition: ease-in-out 300ms;
+                    cursor: pointer;
+
+                    .line {
+                        width: 100%;
+                        height: 2px;
+                        background-color: $bg-black;
+                        border-radius: 12px;
+                        transition: ease-in-out 300ms;
+                    }
+                }
+
+                .open {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    width: 20px;
+                    height: 20px;
+
+                    .line1 {
+                        position: absolute;
+                        transform: rotateZ(45deg);
+
+                        left: 0;
+                    }
+
+                    .line2 {
+                        position: absolute;
+                        height: 100%;
+                        background-color: $bg-white;
+                        z-index: -10;
+                        padding: 1rem;
+                        box-shadow: $box-shadow;
+                    }
+
+                    .line3 {
+                        transform: rotateZ(-45deg);
+                        left: 0;
+                    }
+                }
+
+
+            }
+
+
+            .menu {
+                display: none;
+
+            }
+
+            .cta {
+                display: none;
+            }
+        }
+    }
+}
+
+// Exemplo de estilo para smartphones em retrato
+@media screen and (min-width: 576px) {}
+
+// Exemplo de estilo para smartphones em paisagem
+@media screen and (min-width: 768px) {
+    .header {
+        .nav {
+
+            .box {
+                .menuMobile {
+                    display: none;
+                }
+
+                .menu {
+                    display: flex;
+                    gap: 2rem;
+
+                    a{
+                        font-weight: 700;
+                    }
+                    a:hover{
+                        color: $text-title;
+                    }
+                }
+
+                .cta {
+                    display: none;
+                }
+            }
+        }
+
+    }
+}
+
+// Exemplo de estilo para tablets e dispositivos similares
+@media screen and (min-width: 992px) {
+
+    .header {
+        .nav {
+
+            .box {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                .menu {
+                    display: flex;
+                    gap: 2rem;
+
+                }
+
+                .cta {
+                    display: flex;
+                    padding: 1rem;
+                    background-color: $bg-black;
+                    color: $text-title;
+                    border-radius: 12px;
+                    cursor: pointer;
+                    transition: ease-in-out 300ms;
+                    &:hover{
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+// Exemplo de estilo para desktops e laptops
+@media screen and (min-width: 1200px) {}
